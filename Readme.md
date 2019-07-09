@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Евгений Сомов](https://up.htmlacademy.ru/adaptive/17/user/982685).
-* Наставник: `Неизвестно`.
+* Наставник: [Юрий Головин](https://htmlacademy.ru/profile/id520167).
 
 ---
 
