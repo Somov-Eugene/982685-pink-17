@@ -33,14 +33,10 @@
   </header>
 
   <main class="page-main">
-    <header>
-      <h1 class="contest__title">Фотографии пользователей</h1>
-    </header>
+    <h1 class="contest__title">Фотографии пользователей</h1>
 
     <section class="gallery">
-      <div class="gallery__slogan">
-        <p>Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-      </div>
+      <h2 class="gallery__slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
 
       <article class="post  post--panorama">
         <a class="post__panorama" href="#">
@@ -54,10 +50,8 @@
             <span class="post__age">(5 минут назад)</span>
           </header>
 
-          <div class="post__text">
-            <p>Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте
-              свои вопросы!</p>
-          </div>
+          <p class="post__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе,
+            задавайте свои вопросы!</p>
 
           <div class="post__like">
             <button class="post__like-button  button" type="button">Мне нравится</button>
@@ -77,9 +71,7 @@
             <span class="post__age">(5 часов назад)</span>
           </header>
 
-          <div class="post__text">
-            <p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
-          </div>
+          <p class="post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
 
           <div class="post__like">
             <button class="post__like-button  button" type="button">Мне нравится</button>
@@ -99,9 +91,7 @@
             <span class="post__age">(12 часов назад)</span>
           </header>
 
-          <div class="post__text">
-            <p>Соседи будут рады!</p>
-          </div>
+          <p class="post__text">Соседи будут рады!</p>
 
           <div class="post__like">
             <button class="post__like-button  button" type="button">Мне нравится</button>
@@ -121,9 +111,7 @@
             <span class="post__age">(20 часов назад)</span>
           </header>
 
-          <div class="post__text">
-            <p>Здесь могла быть ваша цитата о высоком и вечном.</p>
-          </div>
+          <p class="post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
 
           <div class="post__like">
             <button class="post__like-button  button" type="button">Мне нравится</button>
@@ -143,9 +131,7 @@
             <span class="post__age">(25 часов назад)</span>
           </header>
 
-          <div class="post__text">
-            <p>Самая кубанская в мире!</p>
-          </div>
+          <p class="post__text">Самая кубанская в мире!</p>
 
           <div class="post__like">
             <button class="post__like-button  button" type="button">Мне нравится</button>
@@ -165,9 +151,7 @@
             <span class="post__age">(40 часов назад)</span>
           </header>
 
-          <div class="post__text">
-            <p>Где снег-то?</p>
-          </div>
+          <p class="post__text">Где снег-то?</p>
 
           <div class="post__like">
             <button class="post__like-button  button" type="button">Мне нравится</button>
@@ -188,9 +172,7 @@
             <span class="post__age">(45 часов назад)</span>
           </header>
 
-          <div class="post__text">
-            <p>Всем GM и взаимные лайки!</p>
-          </div>
+          <p class="post__text">Всем GM и взаимные лайки!</p>
 
           <div class="post__like">
             <button class="post__like-button  button" type="button">Мне нравится</button>
@@ -201,9 +183,7 @@
     </section>
 
     <section class="editor">
-      <div class="editor__slogan">
-        <p>Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
-      </div>
+      <h2 class="editor__slogan">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
 
       <form class="editor__form" method="post" action="http://echo.htmlacademy.ru">
         <div class="editor__image">
@@ -218,7 +198,7 @@
             <label class="editor__label  editor__label--crop" for="crop-id">
               <span class="visually-hidden">Кадрирование</span>
             </label>
-            <input class="editor__range  editor__range--crop" type="range" id="crop-id" name="crop" mix="0" max="100" value="100">
+            <input class="editor__range  editor__range--crop" type="range" id="crop-id" name="crop" min="0" max="100" value="100">
           </li>
 
           <li class="editor__item">
@@ -228,7 +208,7 @@
             <label class="editor__label  editor__label--fill" for="fill-id">
               <span class="visually-hidden">Насыщенность</span>
             </label>
-            <input class="editor__range  editor__range--fill" type="range" id="fill-id" name="fill" mix="0" max="100" value="50">
+            <input class="editor__range  editor__range--fill" type="range" id="fill-id" name="fill" min="0" max="100" value="50">
           </li>
 
           <li class="editor__item">
@@ -238,7 +218,7 @@
             <label class="editor__label  editor__label--contrast" for="contrast-id">
               <span class="visually-hidden">Контрастность</span>
             </label>
-            <input class="editor__range  editor__range--contrast" type="range" id="contrast-id" name="contrast" mix="0" max="100" value="50">
+            <input class="editor__range  editor__range--contrast" type="range" id="contrast-id" name="contrast" min="0" max="100" value="50">
           </li>
         </ul>
 
@@ -247,12 +227,11 @@
           <button class="button button--cancel" type="reset">Отмена</button>
         </div>
       </form>
-      </div>
     </section>
   </main>
 
   <footer class="page-footer">
-    <a class="page-footer__logo">
+    <a class="page-footer__logo" href="index.html">
       <img class="page-footer__logo-image" src="http://placehold.it/147x40" width="147" height="40"
         alt="Логотип «Пинк»">
     </a>
