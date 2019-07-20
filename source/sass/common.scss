@@ -13,9 +13,7 @@ body {
 
   min-width: 320px;
 
-  font-family: $font;
-  font-size: $font-size;
-  line-height: $line-height;
+  @include font;
 
   color: $dark-two;
   background-color: $white;
