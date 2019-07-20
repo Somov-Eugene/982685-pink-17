@@ -1,0 +1,18 @@
+@mixin font($fweight: 400, $fsize: 18px, $lheight: 30px) {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: $fweight;
+  font-style: normal;
+  font-size: $fsize;
+  line-height: $lheight;
+}
+
+@mixin list-none {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin outline {
+  outline: 1px dashed red;
+  outline-offset: -1px;
+}
