@@ -1,0 +1,29 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+}
+
+.copyright__text {
+  display: block;
+  @include font(400, 14px, 18px);
+  color: $dark-two;
+}
+
+.copyright__link {
+  position: relative;
+  display: block;
+  width: 27px;
+  height: 34px;
+  color: $pink;
+  background-color: $dark-two;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../img/htmlacademy.svg");
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+  }
+
+}

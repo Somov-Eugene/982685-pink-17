@@ -1,0 +1,75 @@
+.post {
+
+}
+
+.post__photo {
+  width: 280px;
+  height: 180px;
+
+  &--panorama {
+    position: relative;
+    width: 320px;
+    height: 137px;
+  }
+
+  &--banner {
+    position: absolute;
+    display: block;
+    top: -118px;
+    right: 20px;
+    width: 140px;
+    padding: 11px 19px;
+
+    @include font(700, 12px, 24px);
+    text-transform: uppercase;
+    color: $white;
+    background-color: $pink;
+  }
+}
+
+.post__body {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 17px;
+  padding-right: 23px;
+  padding-bottom: 28px;
+  color: $dark-two;
+  background-color: $white-two;
+}
+
+.post__header {
+
+}
+
+.post__author {
+  @include font(700, 14px, 24px);
+}
+
+.post__age {
+  @include font(300, 12px, 24px);
+}
+
+.post__text {
+  @include font(400, 14px, 24px);
+}
+
+.post__like {
+  color: $pink;
+}
+
+.post__like-button {
+  font-size: 0;
+  vertical-align: middle;
+  width: 13px;
+  height: 12px;
+  border: none;
+  color: $pink;
+  background-image: url("../../img/icon-heart.svg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+.post__stats,
+.post__stats-counter  {
+  @include font(400, 12px, 24px);
+}

@@ -1,0 +1,18 @@
+.main-nav {
+}
+
+.main-nav__list {
+  @include list-none;
+}
+
+.site-list__item {
+  @include font(700, 18px, 32px);
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+
+  box-shadow: 0 1px 0 0 #000000, inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+}
+
+.site-list__item--active {
+}
