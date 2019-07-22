@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -40,11 +42,11 @@
       <!-- Заголовок скрыт в мобильной версии -->
       <h2 class="downloads__slogan">Взгляните на жизнь иначе!</h2>
 
-      <a class="downloads__download-btn button" href="https://www.apple.com/ru/itunes/">Скачать приложение</a>
+      <a class="button button--download" href="https://www.apple.com/ru/itunes/">Скачать приложение</a>
       <div class="downloads__markets">
-        <a class="downloads__market downloads__market--apple" href="https://www.apple.com/ru/itunes/">Apple</a>
-        <a class="downloads__market downloads__market--google" href="https://play.google.com/store/">Android</a>
-        <a class="downloads__market downloads__market--microsoft" href="https://www.microsoft.com/store/">Windows</a>
+        <a class="downloads__market downloads__market--apple" href="https://www.apple.com/ru/itunes/"><span class="visually-hidden">Apple</span></a>
+        <a class="downloads__market downloads__market--google" href="https://play.google.com/store/"><span class="visually-hidden">Android</span></a>
+        <a class="downloads__market downloads__market--microsoft" href="https://www.microsoft.com/store/"><span class="visually-hidden">Windows</span></a>
       </div>
       <p class="downloads__description">
         Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X, Windows&nbsp;8
@@ -52,9 +54,9 @@
     </section>
 
     <section class="advantages">
-      <h2 class="advantages__title">
-        <span class="advantages__title-row">Устали от серости мегаполиса?</span>
-        <span class="advantages__title-row">Нам есть, что вам предложить!</span>
+      <h2 class="advantages__slogan">
+        <span class="advantages__slogan-row">Устали от серости мегаполиса?</span>
+        <span class="advantages__slogan-row">Нам есть, что вам предложить!</span>
       </h2>
 
       <ul class="advantages__list">
@@ -71,8 +73,7 @@
           <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
         </li>
       </ul>
-
-      <img class="advantages__image" src="http://placehold.it/157x320" width="157" height="320" alt="iphone-screen-3">
+      <p class="advantages__image"><img src="../img/iphone-screen-mobile@1x.png" width="157" height="320" alt="iphone-screen-3"></p>
     </section>
 
     <section class="reviews">
@@ -111,16 +112,16 @@
         <table class="tariffs__table  slider__list">
           <tr class="slider__item">
             <th class="tariffs__head">
-              <div class="tariffs__name">Тариф 1</div>
-              <div class="tariffs__cost">x,xx USD</div>
+              <div class="tariffs__name">База</div>
+              <div class="tariffs__cost">1,99 USD</div>
             </th>
             <th class="tariffs__head  tariffs__head--hit">
               <div class="tariffs__name">Стандарт</div>
               <div class="tariffs__cost">3,99 USD</div>
             </th>
             <th class="tariffs__head">
-              <div class="tariffs__name">Тариф 3</div>
-              <div class="tariffs__cost">x,xx USD</div>
+              <div class="tariffs__name">Анлим</div>
+              <div class="tariffs__cost">9,99 USD</div>
             </th>
           </tr>
 
@@ -169,18 +170,18 @@
             </td>
           </tr>
         </table>
-        <p class="tariffs__toggles slider__toggles">
+        <div class="tariffs__toggles slider__toggles">
           <button class="slider__toggle" type="button">1</button>
           <button class="slider__toggle  slider__toggle--active" type="button">2</button>
           <button class="slider__toggle" type="button">3</button>
-        </p>
+        </div>
       </div>
     </section>
 
     <section class="contacts">
-      <h2 class="contacts__title">
-        <span class="contacts__title-row">Остались вопросы?</span>
-        <span class="contacts__title-row">Свяжитесь с нами!</span>
+      <h2 class="contacts__slogan">
+        <span class="contacts__slogan-row">Остались вопросы?</span>
+        <span class="contacts__slogan-row">Свяжитесь с нами!</span>
       </h2>
 
       <div class="contacts__items">
@@ -205,30 +206,29 @@
     </section>
   </main>
 
-  <!-- Футер скрыт в мобильной версии -->
-  <footer class="page-footer  page-footer--index">
+  <footer class="page-footer">
     <a class="page-footer__logo">
-      <img class="page-footer__logo-image" src="http://placehold.it/147x40" width="147" height="40" alt="Логотип «Пинк»">
+      <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип «Пинк»">
     </a>
 
     <div class="page-footer__social social">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
+            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy"><span class="visually-hidden">Твиттер</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Фейсбук</a>
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Фейсбук</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Инстаграм</a>
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy"><span class="visually-hidden">Ютуб</span></a>
           </li>
         </ul>
     </div>
 
     <div class="page-footer__copyright copyright">
       <b class="copyright__text">Разработано:</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
     </div>
   </footer>
 </body>
