@@ -5,14 +5,14 @@
 .editor__slogan {
   padding-left: 32px;
   padding-right: 32px;
+
   @include font(400, 14px, 30px);
   text-align: center;
   color: $dark-two;
 }
 
-.editor__form {
-
-}
+// .editor__form {
+// }
 
 .editor__image {
   width: 280px;

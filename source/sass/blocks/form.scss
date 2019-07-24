@@ -1,0 +1,151 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__fieldset {
+  &--fullname {
+    background-color: $white;
+  }
+
+  &--achievements {
+    background-color: $white-two;
+    // временно
+    min-height: 604px;
+  }
+
+  &--contacts {
+    background-color: $white;
+  }
+
+  &--application {
+    background-color: $white-two;
+    // временно
+    min-height: 340px;
+  }
+
+  &--emotions {
+    background-color: $white;
+  }
+}
+
+.form__title {
+  @include font(400, 14px, 18px);
+  text-align: center;
+  color: $pink;
+
+  &--achievements {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  &--application {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  &--emotions {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+.form__field-text {
+  padding-left: 22px;
+  padding-right: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__text-label {
+  padding-left: 21px;
+
+  @include font(400, 14px, 30px);
+  color: $pink;
+}
+
+.form__text-input {
+  @include font(400, 18px, 30px);
+  color: $dark-two;
+  border: 2px solid $grey;
+
+  &:hover {
+    border: 2px solid $dark-two;
+  }
+
+  &:focus {
+    border: 2px solid $pink;
+  }
+}
+
+.form__field-checkbox {
+  margin-bottom: 63px;
+}
+
+.form__field-radio {
+  margin-bottom: 57px;
+}
+
+.form__checkbox-label,
+.form__radio-label {
+  padding-left: 90px;
+
+  @include font(400, 18px, 30px);
+  color: $dark-two;
+}
+
+.form__checkbox-input {
+  @include font(400, 18px, 30px);
+  color: $dark-two;
+}
+
+.form__radio-input {
+  @include font(400, 18px, 30px);
+  color: $dark-two;
+}
+
+.form__submit {
+  margin-left: 22px;
+  margin-right: 22px;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  width: 276px;
+
+  @include font(700, 18px, 30px);
+  text-transform: uppercase;
+  color: $white;
+  background-color: #2aab6d;
+  border: 2px solid #2aab6d;
+  border-radius: 3px;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: #1c9b5e;
+    border: 2px solid #1c9b5e;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #1c9b5e;
+    border: 2px solid #1c9b5e;
+  }
+
+  &:disabled {
+    color: $white;
+    background-color: #e5e5e5;
+    border: 2px solid #e5e5e5;
+  }
+}
+
+.form__note {
+  @include font(400, 14px, 30px);
+  text-transform: uppercase;
+  text-align: center;
+  color: $dark-two;
+}
+
+.form__note-symbol {
+  @include font(400, 14px, 30px);
+  color: $pink;
+}

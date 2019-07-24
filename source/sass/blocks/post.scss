@@ -1,6 +1,6 @@
-.post {
+// .post {
 
-}
+// }
 
 .post__photo {
   width: 280px;
@@ -37,9 +37,9 @@
   background-color: $white-two;
 }
 
-.post__header {
+// .post__header {
 
-}
+// }
 
 .post__author {
   @include font(700, 14px, 24px);
@@ -70,6 +70,6 @@
 }
 
 .post__stats,
-.post__stats-counter  {
+.post__stats-counter {
   @include font(400, 12px, 24px);
 }

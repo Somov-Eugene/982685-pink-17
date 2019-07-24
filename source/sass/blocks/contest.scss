@@ -1,5 +1,6 @@
 .contest__title {
   @include font(300, 24px, 30px);
+  text-align: center;
   color: $white;
   background-color: $dark-two;
 }
@@ -9,6 +10,7 @@
   padding-right: 25px;
 
   @include font(400, 14px, 30px);
+  text-align: center;
   color: $dark-two;
 }
 
@@ -17,5 +19,6 @@
   padding-right: 40px;
 
   @include font(400, 14px, 30px);
+  text-align: center;
   color: $dark-two;
 }

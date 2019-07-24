@@ -5,6 +5,7 @@
 
 .copyright__text {
   display: block;
+
   @include font(400, 14px, 18px);
   color: $dark-two;
 }
@@ -25,5 +26,4 @@
     top: 0;
     left: 0;
   }
-
 }
