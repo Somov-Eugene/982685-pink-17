@@ -1,0 +1,61 @@
+.downloads {
+  padding-top: 396px;
+  background-color: $dark-two;
+  background-image: url("../../img/iphone-hand-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: calc(50% - 31px) 109px;
+  background-size: 258px;
+}
+
+.downloads__slogan {
+  display: none;
+
+  @include font(300, 24px, 30px);
+  color: $white;
+}
+
+.downloads__markets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include list-none;
+  margin-bottom: 21px;
+}
+
+.downloads__market {
+  display: block;
+  background-repeat: no-repeat;
+
+  &--apple {
+    width: 47px;
+    height: 57px;
+    margin-left: 35px;
+    background-image: url("../../img/logo-apple.svg");
+    background-size: 47px 57px;
+  }
+
+  &--google {
+    width: 43px;
+    height: 47px;
+    margin-top: 8px;
+    margin-left: 24px;
+    background-image: url("../../img/logo-android.svg");
+    background-size: 43px 47px;
+  }
+
+  &--microsoft {
+    width: 44px;
+    height: 42px;
+    margin-top: 12px;
+    margin-left: 12px;
+    background-image: url("../../img/logo-microsoft.svg");
+    background-size: 44px 42px;
+  }
+}
+
+.downloads__description {
+  @include font(300, 14px, 24px);
+  text-align: center;
+  color: $white;
+}

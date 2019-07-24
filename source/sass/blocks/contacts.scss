@@ -1,0 +1,59 @@
+.contacts {
+  position: relative;
+  text-align: center;
+  background-color: $white;
+  background-image: url("../../img/bg-triangle-white-footer.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+  width: 100%;
+  height: 645px;
+}
+
+.contacts__slogan {
+  @include font(300, 24px, 30px);
+  color: $dark-two;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacts__slogan-row {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+// .contacts__items {
+
+// }
+
+.contacts__item {
+  &--phone {
+    padding-left: 58px;
+    padding-right: 58px;
+  }
+
+  &--email {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &--address {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+}
+
+.contacts__item-name {
+  @include font(700, 18px, 22px);
+  color: $dark-two;
+}
+
+.contacts__item-value {
+  @include font(300, 24px, 30px);
+  color: $pink;
+}
+
+.contacts__map-wrapper {
+  position: absolute;
+  z-index: -1;
+}

@@ -1,0 +1,72 @@
+.tariffs {
+  background-color: $white-two;
+}
+
+.tariffs__table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.tariffs__head {
+  position: relative;
+
+  text-align: center;
+  border: 2px solid $grey;
+  color: $white;
+  background-color: $dark-two;
+}
+
+.tariffs__head--hit {
+  background-image: url("../../img/bg-hit.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.tariffs__head--hit::after {
+  @include font(400, 10px, 21px);
+  position: absolute;
+  content: "ХИТ";
+  top: 12px;
+  left: 20px;
+  transform: rotate(-45deg);
+  color: $white;
+}
+
+.tariffs__name {
+  @include font(700, 16px, 30px);
+}
+
+.tariffs__cost {
+  @include font(300, 18px, 30px);
+}
+
+.tariffs__cell {
+  padding-left: 22px;
+  padding-right: 22px;
+  width: 276px;
+  min-height: 59px;
+  border: 2px solid $grey;
+}
+
+.tariffs__feature-name {
+  padding-top: 22px;
+  padding-bottom: 23px;
+
+  @include font(400, 14px, 30px);
+}
+
+.tariffs__feature-state {
+  @include font(400, 14px, 30px);
+}
+
+.tariffs__feature-state--on {
+  color: $leaf;
+}
+
+.tariffs__feature-state--off {
+  color: $light-red;
+}
+
+.tariffs__toggles {
+  text-align: center;
+}

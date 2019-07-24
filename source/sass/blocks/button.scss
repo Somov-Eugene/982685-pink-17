@@ -1,0 +1,70 @@
+.button {
+  display: block;
+
+  padding-top: 15px;
+  padding-bottom: 16px;
+
+
+  @include font(700, 18px, 18px);
+  background-color: transparent;
+  border-radius: 27px;
+
+  &--download {
+    width: 290px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: $white;
+    border: 3px solid $white;
+  }
+
+  &--download:hover,
+  &--download:focus {
+    color: $pink;
+    background-color: $white;
+  }
+
+  &--download:active {
+    color: rgba(210, 40, 86, 0.3);
+    background-color: $white;
+  }
+
+  &--send {
+    width: 280px;
+    padding-left: 90px;
+    padding-right: 90px;
+    margin-bottom: 12px;
+    color: $pink;
+    border: 3px solid $pink;
+  }
+
+  &--send:hover,
+  &--send:focus {
+    color: $white;
+    background-color: $pink;
+  }
+
+  &--send:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: $pink;
+  }
+
+  &--cancel {
+    width: 280px;
+    padding-left: 104px;
+    padding-right: 105px;
+    color: rgba(40, 54, 69, 0.1);
+    border: 3px solid rgba(40, 54, 69, 0.1);
+  }
+
+  &--cancel:hover,
+  &--cancel:focus {
+    color: rgba(40, 54, 69, 0.3);
+    border: 3px solid rgba(40, 54, 69, 0.3);
+  }
+
+  &--cancel:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(40, 54, 69, 0.3);
+    border: 3px solid transparent;
+  }
+}

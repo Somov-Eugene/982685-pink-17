@@ -1,0 +1,48 @@
+.advantages {
+  padding-top: 41px;
+  background-color: $white;
+}
+
+.advantages__slogan {
+  @include font(300, 24px, 30px);
+  text-align: center;
+  color: $dark-two;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantages__slogan-row {
+  width: 210px;
+  padding-bottom: 20px;
+}
+
+.advantages__list {
+  @include list-none;
+  background-color: $white-two;
+}
+
+.advantages__item {
+  padding: 0 34px;
+  text-align: center;
+}
+
+.advantages__title {
+  @include font(700, 18px, 24px);
+}
+
+.advantages__description {
+  @include font(400, 14px, 24px);
+}
+
+.advantages__image {
+  padding: 0;
+  margin: 0;
+  background-color: $white-two;
+  text-align: center;
+}
+
+.advantages__image img {
+  width: 157;
+  height: 320;
+}
