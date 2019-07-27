@@ -1,18 +1,83 @@
-// .main-nav {
-// }
+.main-nav {
+  margin: 0 auto;
+  width: 320px;
+
+  /* Временно для сетки */
+  min-height: 69px;
+
+  @media (min-width: $tablet-width) {
+    width: 660px;
+
+    /* Временно для сетки */
+    min-height: 110px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+    /* Временно для сетки */
+    // min-height: 110px;
+  }
+}
+
+.main-nav__toggle {
+  display: none;
+}
 
 .main-nav__list {
   @include list-none;
-}
 
-.site-list__item {
   @include font(700, 18px, 32px);
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
   color: $white;
 
-  box-shadow: 0 1px 0 0 #000000, inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  @media (min-width: $desktop-width) {
+    padding-top: 44px;
+    padding-bottom: 44px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include font(400, 18px, 18px);
+    text-transform: none;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
 
-// .site-list__item--active {
-// }
+.main-nav__item {
+  padding-top: 17px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+
+  background-color: $dark-two;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 0 #000000;
+
+  &:hover a[href] {
+    color: $pink;
+  }
+
+  &:active a[href] {
+    color: $pink;
+    opacity: 0.3;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+
+    &:not(:last-child) {
+      margin-right: 80px;
+    }
+
+    &:active a[href] {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &--active {
+      color: $white;
+      padding-bottom: 7px;
+      background-image: linear-gradient(to top, white 0, white 2px, transparent 2px);
+    }
+  }
+}
