@@ -1,17 +1,26 @@
 .page-header {
-  // закрытое меню
-  // position: absolute;
-  // background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
 
-  width: 100%;
-  background-color: $dark-two;
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
 }
 
 .page-header__logo {
-  width: 75px;
-  margin-left: 20px;
-}
+  width: 74px;
+  min-height: 69px;
 
-.page-header__logo-image {
-  padding: 22px 0;
+  /* Временно для сетки */
+  background-color: rgba(255, 0, 0, 0.5);
+
+  @media (min-width: $tablet-width) {
+    width: 147px;
+    min-height: 110px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 147px;
+    min-height: 110px;
+  }
 }
