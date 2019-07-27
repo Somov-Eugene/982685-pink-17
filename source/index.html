@@ -15,23 +15,22 @@
       <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип «Пинк»">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a href="photo.html">Фотографии</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Конкурс</a>
-          </li>
-          <li class="site-list__item">
-            <a href="https://htmlacademy.ru">HTML Academy</a>
-          </li>
-        </ul>
-      </div>
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item  main-nav__item--active">
+          <a>Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="photo.html">Фотографии</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="form.html">Конкурс</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="https://htmlacademy.ru">HTML Academy</a>
+        </li>
+      </ul>
+
     </nav>
   </header>
 
@@ -39,14 +38,19 @@
     <h1 class="visually-hidden">Фотоприложение для раскрашивания серых будней «Pink»</h1>
 
     <section class="downloads">
-      <!-- Заголовок скрыт в мобильной версии -->
       <h2 class="downloads__slogan">Взгляните на жизнь иначе!</h2>
 
       <a class="button button--download" href="https://www.apple.com/ru/itunes/">Скачать приложение</a>
       <div class="downloads__markets">
-        <a class="downloads__market downloads__market--apple" href="https://www.apple.com/ru/itunes/"><span class="visually-hidden">Apple</span></a>
-        <a class="downloads__market downloads__market--google" href="https://play.google.com/store/"><span class="visually-hidden">Android</span></a>
-        <a class="downloads__market downloads__market--microsoft" href="https://www.microsoft.com/store/"><span class="visually-hidden">Windows</span></a>
+        <a class="downloads__market downloads__market--apple" href="https://www.apple.com/ru/itunes/">
+          <span class="visually-hidden">Apple</span>
+        </a>
+        <a class="downloads__market downloads__market--google" href="https://play.google.com/store/">
+          <span class="visually-hidden">Android</span>
+        </a>
+        <a class="downloads__market downloads__market--microsoft" href="https://www.microsoft.com/store/">
+          <span class="visually-hidden">Windows</span>
+        </a>
       </div>
       <p class="downloads__description">
         Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X, Windows&nbsp;8
@@ -200,7 +204,6 @@
       </div>
 
       <div class="contacts__map-wrapper">
-        <!-- Интерактивная карта от Яндекса -->
         <div class="yamap" id="map"></div>
       </div>
     </section>
@@ -213,17 +216,23 @@
 
     <div class="page-footer__social social">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy"><span class="visually-hidden">Твиттер</span></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Фейсбук</span></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy"><span class="visually-hidden">Ютуб</span></a>
-          </li>
-        </ul>
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy">
+            <span class="visually-hidden">Ютуб</span>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <div class="page-footer__copyright copyright">
