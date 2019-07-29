@@ -4,17 +4,39 @@
   padding-top: 15px;
   padding-bottom: 16px;
 
-
   @include font(700, 18px, 18px);
   background-color: transparent;
-  border-radius: 27px;
+  border-radius: 30px;
 
   &--download {
+    margin: 0 auto;
     width: 290px;
     padding-left: 40px;
     padding-right: 40px;
     color: $white;
     border: 3px solid $white;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+      margin-top: -2px;
+      margin-left: 20px;
+
+      width: 300px;
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      @include font(700, 21px, 18px);
+
+      margin: 0;
+      margin-top: 12px;
+      margin-left: 130px;
+
+      width: 300px;
+      padding-left: 28px;
+      padding-right: 28px;
+    }
   }
 
   &--download:hover,
