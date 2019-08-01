@@ -3,9 +3,10 @@
 @import "normalize.scss";
 @import "fonts.scss";
 @import "common.scss";
-@import "outline.scss";
+// @import "outline.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
+@import "blocks/main-header.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/advantages.scss";
 @import "blocks/contacts.scss";
@@ -15,6 +16,7 @@
 @import "blocks/editor.scss";
 @import "blocks/button.scss";
 @import "blocks/form.scss";
+@import "blocks/gallery.scss";
 @import "blocks/post.scss";
 @import "blocks/reviews.scss";
 @import "blocks/slider.scss";
