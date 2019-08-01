@@ -13,31 +13,33 @@
       <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип «Пинк»">
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a href="photo.html">Фотографии</a>
-            </li>
-            <li class="site-list__item site-list__item--active">
-              <a>Конкурс</a>
-            </li>
-            <li class="site-list__item">
-              <a href="https://htmlacademy.ru">HTML Academy</a>
-            </li>
-          </ul>
-        </div>
+      <nav class="main-nav  main-nav--closed">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="photo.html">Фотографии</a>
+          </li>
+          <li class="main-nav__item  main-nav__item--active">
+            <a>Конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="https://htmlacademy.ru">HTML Academy</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
     <main class="page-main">
-      <h1 class="contest__title">Конкурс на самое<br> безбашенное<br> путешествие с Пинк</h1>
+      <header class="main-header">
+        <h1 class="main-header__title main-header__title--form">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </header>
 
-      <p class="contest__prize">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+      <p class="contest__prize">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+        <span class="contest__fill-form">Пожалуйста, заполните форму ниже:</span>
+      </p>
 
       <form class="form" method="post" action="http://echo.htmlacademy.ru">
 
@@ -128,7 +130,7 @@
         <div class="form__fieldset  form__fieldset--emotions">
           <h2 class="form__title  form__title--emotions">Опишите свои эмоции</h2>
           <div class="form__textarea-fields  form__textarea-fields--emotions">
-            <textarea class="form__textarea" name="emotions" rows="8" cols="30" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <textarea class="form__textarea" name="emotions" rows="8" cols="23" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </div>
         </div>
 
