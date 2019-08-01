@@ -17,6 +17,7 @@
 
   @media (min-width: $desktop-width) {
     margin-right: 13px;
+
     @include font(400, 18px, 18px);
   }
 }
