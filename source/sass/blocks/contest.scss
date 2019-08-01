@@ -1,24 +1,41 @@
-.contest__title {
-  @include font(300, 24px, 30px);
-  text-align: center;
-  color: $white;
-  background-color: $dark-two;
-}
-
 .contest__prize {
-  padding-left: 25px;
-  padding-right: 25px;
+  margin: 0 auto;
+  width: 320px;
+
+  padding-top: 45px;
+  padding-bottom: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @include font(400, 14px, 30px);
   text-align: center;
   color: $dark-two;
+
+  @media (min-width: $tablet-width) {
+    width: 660px;
+
+    padding-top: 92px;
+    padding-bottom: 76px;
+    padding-left: 85px;
+    padding-right: 85px;
+
+    @include font(400, 18px, 30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+
+    padding-top: 92px;
+    padding-bottom: 64px;
+    padding-left: 220px;
+    padding-right: 220px;
+  }
 }
 
-.gallery__slogan {
-  padding-left: 40px;
-  padding-right: 40px;
+.contest__fill-form {
+  display: none;
 
-  @include font(400, 14px, 30px);
-  text-align: center;
-  color: $dark-two;
+  @media (min-width: $tablet-width) {
+    display: inline;
+  }
 }
