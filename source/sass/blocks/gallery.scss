@@ -1,0 +1,42 @@
+.gallery {
+  margin: 0 auto;
+
+  width: 320px;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    width: 660px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+  }
+}
+
+.gallery__slogan {
+  margin: 0;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 45px;
+  padding-bottom: 50px;
+
+  @include font(400, 14px, 30px);
+  text-align: center;
+  color: $dark-two;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 92px;
+    padding-bottom: 76px;
+
+    @include font(400, 18px, 30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 310px;
+    padding-right: 310px;
+    padding-top: 92px;
+    padding-bottom: 88px;
+  }
+}
