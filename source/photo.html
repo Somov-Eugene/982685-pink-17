@@ -12,177 +12,192 @@
 <body>
   <header class="page-header">
     <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип «Пинк»">
+      <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22"
+        alt="Логотип «Пинк»">
     </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item site-list__item--active">
-            <a>Фотографии</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Конкурс</a>
-          </li>
-          <li class="site-list__item">
-            <a href="https://htmlacademy.ru">HTML Academy</a>
-          </li>
-        </ul>
-      </div>
+    <nav class="main-nav  main-nav--closed">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a href="index.html">Главная</a>
+        </li>
+        <li class="main-nav__item  main-nav__item--active">
+          <a>Фотографии</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="form.html">Конкурс</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="https://htmlacademy.ru">HTML Academy</a>
+        </li>
+      </ul>
     </nav>
   </header>
 
   <main class="page-main">
-    <h1 class="contest__title">Фотографии пользователей</h1>
+    <header class="main-header">
+      <h1 class="main-header__title main-header__title--photo">Фотографии пользователей</h1>
+    </header>
 
     <section class="gallery">
       <h2 class="gallery__slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
 
-      <article class="post">
+      <article class="post  post--panorama">
         <a class="post__photo  post__photo--panorama" href="#">
-          <span class="post__photo--banner">Панорама дня</span>
-          <img src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Автор: Анна">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg 2x">
+            <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Автор: Анна">
+          </picture>
+          <span class="post__legend">Панорама дня</span>
         </a>
 
-        <div class="post__body">
-          <header class="post__header">
+        <div class="post__body  post__body--panorama">
+          <header class="post__header  post__header--panorama">
             <span class="post__author">Анна</span>
             <span class="post__age">(5 минут назад)</span>
           </header>
-
-          <p class="post__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе,
-            задавайте свои вопросы!</p>
-
-          <div class="post__like">
-            <button class="post__like-button  button" type="button">Мне нравится</button>
-            <span class="post__stats">Hравится: <span class="post__stats-counter">215</span></span>
+          <p class="post__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+          <div class="post__like  post__like--panorama">
+            <button class="post__like-button" type="button">Мне нравится</button>
+            <span class="post__stats  post__stats--panorama">Hравится: <span class="post__stats-counter">215</span></span>
           </div>
         </div>
       </article>
 
-      <article class="post">
-        <a class="post__photo" href="#">
-          <img src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Автор: Левон">
-        </a>
+      <div class="post__container">
+        <article class="post  post--card">
+          <a class="post__photo" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg, img/photo-car-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg, img/photo-car-tablet@2x.jpg 2x">
+              <img src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Автор: Левон">
+            </picture>
+          </a>
 
-        <div class="post__body">
-          <header class="post__header">
-            <span class="post__author">Левон</span>
-            <span class="post__age">(5 часов назад)</span>
-          </header>
-
-          <p class="post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-
-          <div class="post__like">
-            <button class="post__like-button  button" type="button">Мне нравится</button>
-            <span class="post__stats">Hравится: <span class="post__stats-counter">356</span></span>
+          <div class="post__body">
+            <header class="post__header">
+              <span class="post__author">Левон</span>
+              <span class="post__age">(5 часов назад)</span>
+            </header>
+            <p class="post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <div class="post__like">
+              <button class="post__like-button" type="button">Мне нравится</button>
+              <span class="post__stats">Hравится: <span class="post__stats-counter">356</span></span>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="post">
-        <a class="post__photo" href="#">
-          <img src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Автор: Антон">
-        </a>
+        <article class="post  post--card">
+          <a class="post__photo" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg, img/photo-drumset-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg, img/photo-drumset-tablet@2x.jpg 2x">
+              <img src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Автор: Антон">
+            </picture>
+          </a>
 
-        <div class="post__body">
-          <header class="post__header">
-            <span class="post__author">Антон</span>
-            <span class="post__age">(12 часов назад)</span>
-          </header>
-
-          <p class="post__text">Соседи будут рады!</p>
-
-          <div class="post__like">
-            <button class="post__like-button  button" type="button">Мне нравится</button>
-            <span class="post__stats">Hравится: <span class="post__stats-counter">666</span></span>
+          <div class="post__body">
+            <header class="post__header">
+              <span class="post__author">Антон</span>
+              <span class="post__age">(12 часов назад)</span>
+            </header>
+            <p class="post__text">Соседи будут рады!</p>
+            <div class="post__like">
+              <button class="post__like-button" type="button">Мне нравится</button>
+              <span class="post__stats">Hравится: <span class="post__stats-counter">666</span></span>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="post">
-        <a class="post__photo" href="#">
-          <img src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Автор: Борис">
-        </a>
+        <article class="post  post--card">
+          <a class="post__photo" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg, img/photo-window-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg, img/photo-window-tablet@2x.jpg 2x">
+              <img src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="Автор: Борис">
+            </picture>
+          </a>
 
-        <div class="post__body">
-          <header class="post__header">
-            <span class="post__author">Борис</span>
-            <span class="post__age">(20 часов назад)</span>
-          </header>
-
-          <p class="post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-
-          <div class="post__like">
-            <button class="post__like-button  button" type="button">Мне нравится</button>
-            <span class="post__stats">Hравится: <span class="post__stats-counter">215</span></span>
+          <div class="post__body">
+            <header class="post__header">
+              <span class="post__author">Борис</span>
+              <span class="post__age">(20 часов назад)</span>
+            </header>
+            <p class="post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <div class="post__like">
+              <button class="post__like-button" type="button">Мне нравится</button>
+              <span class="post__stats">Hравится: <span class="post__stats-counter">215</span></span>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="post">
-        <a class="post__photo" href="#">
-          <img src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Автор: Сергей">
-        </a>
+        <article class="post  post--card">
+          <a class="post__photo" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg, img/photo-fair-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg, img/photo-fair-tablet@2x.jpg 2x">
+              <img src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Автор: Сергей">
+            </picture>
+          </a>
 
-        <div class="post__body">
-          <header class="post__header">
-            <span class="post__author">Сергей</span>
-            <span class="post__age">(25 часов назад)</span>
-          </header>
-
-          <p class="post__text">Самая кубанская в мире!</p>
-
-          <div class="post__like">
-            <button class="post__like-button  button" type="button">Мне нравится</button>
-            <span class="post__stats">Hравится: <span class="post__stats-counter">4</span></span>
+          <div class="post__body">
+            <header class="post__header">
+              <span class="post__author">Сергей</span>
+              <span class="post__age">(25 часов назад)</span>
+            </header>
+            <p class="post__text">Самая кубанская в мире!</p>
+            <div class="post__like">
+              <button class="post__like-button" type="button">Мне нравится</button>
+              <span class="post__stats">Hравится: <span class="post__stats-counter">4</span></span>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="post">
-        <a class="post__photo" href="#">
-          <img src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Автор: Максим">
-        </a>
+        <article class="post  post--card">
+          <a class="post__photo" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg, img/photo-pov-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg, img/photo-pov-tablet@2x.jpg 2x">
+              <img src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Автор: Максим">
+            </picture>
+          </a>
 
-        <div class="post__body">
-          <header class="post__header">
-            <span class="post__author">Максим</span>
-            <span class="post__age">(40 часов назад)</span>
-          </header>
-
-          <p class="post__text">Где снег-то?</p>
-
-          <div class="post__like">
-            <button class="post__like-button  button" type="button">Мне нравится</button>
-            <span class="post__stats">Hравится: <span class="post__stats-counter"></span>150</span>
+          <div class="post__body">
+            <header class="post__header">
+              <span class="post__author">Максим</span>
+              <span class="post__age">(40 часов назад)</span>
+            </header>
+            <p class="post__text">Где снег-то?</p>
+            <div class="post__like">
+              <button class="post__like-button" type="button">Мне нравится</button>
+              <span class="post__stats">Hравится: <span class="post__stats-counter"></span>150</span>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
+        <article class="post  post--card">
+          <a class="post__photo" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg, img/photo-wing-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg, img/photo-wing-tablet@2x.jpg 2x">
+              <img src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Автор: Надежда">
+            </picture>
+          </a>
 
-      <article class="post">
-        <a class="post__photo" href="#">
-          <img src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Автор: Надежда">
-        </a>
-
-        <div class="post__body">
-          <header class="post__header">
-            <span class="post__author">Надежда</span>
-            <span class="post__age">(45 часов назад)</span>
-          </header>
-
-          <p class="post__text">Всем GM и взаимные лайки!</p>
-
-          <div class="post__like">
-            <button class="post__like-button  button" type="button">Мне нравится</button>
-            <span class="post__stats">Hравится: <span class="post__stats-counter">2560</span></span>
+          <div class="post__body">
+            <header class="post__header">
+              <span class="post__author">Надежда</span>
+              <span class="post__age">(45 часов назад)</span>
+            </header>
+            <p class="post__text">Всем GM и взаимные лайки!</p>
+            <div class="post__like">
+              <button class="post__like-button" type="button">Мне нравится</button>
+              <span class="post__stats">Hравится: <span class="post__stats-counter">2560</span></span>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
+      </div>
     </section>
 
     <section class="editor">
@@ -190,7 +205,11 @@
 
       <form class="editor__form" method="post" action="http://echo.htmlacademy.ru">
         <div class="editor__image">
-          <img src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Редактируемое изображение">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg, img/photo-road-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg, img/photo-road-tablet@2x.jpg 2x">
+            <img src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Редактируемое изображение">
+          </picture>
         </div>
 
         <ul class="editor__items">
@@ -234,30 +253,37 @@
   </main>
 
   <footer class="page-footer">
-    <a class="page-footer__logo">
-      <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип «Пинк»">
-    </a>
+    <div class="page-footer__container">
+      <a class="logo page-footer__logo">
+        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40"
+          alt="Логотип «Пинк»">
+      </a>
 
-    <div class="page-footer__social social">
-      <h2 class="visually-hidden">Мы в социальных сетях</h2>
+      <div class="page-footer__social social">
+        <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy"><span class="visually-hidden">Твиттер</span></a>
+            <a class="social__link social__link--twitter" href="#">
+              <span class="visually-hidden">Twitter</span>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Фейсбук</span></a>
+            <a class="social__link social__link--facebook" href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy"><span class="visually-hidden">Ютуб</span></a>
+            <a class="social__link social__link--youtube" href="#">
+              <span class="visually-hidden">YouTube</span>
+            </a>
           </li>
         </ul>
-    </div>
+      </div>
 
-    <div class="page-footer__copyright copyright">
-      <b class="copyright__text">Разработано:</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
-    </div>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано:</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+      </div>
   </footer>
 </body>
-
 </html>
