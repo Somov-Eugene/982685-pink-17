@@ -1,6 +1,22 @@
 .form {
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
+  width: 320px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 22px;
+  padding-right: 22px;
+
+  // background-color: $white;
+  background-color: rgba(255, 0, 0, 0.5);
+
+  @media (min-width: $tablet-width) {
+    width: 660px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+  }
 }
 
 .form__fieldset {
@@ -51,23 +67,48 @@
 }
 
 .form__field-text {
-  padding-left: 22px;
-  padding-right: 22px;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 56px;
+  }
 }
 
 .form__text-label {
-  padding-left: 21px;
+  padding: 0;
+  padding-top: 28px;
+  padding-bottom: 16px;
+  padding-left: 22px;
+  padding-right: 0;
 
   @include font(400, 14px, 30px);
   color: $pink;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 22px;
+  }
 }
 
 .form__text-input {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 59px;
+  width: 100%;
+  outline: none;
+
   @include font(400, 18px, 30px);
+  text-align: left;
   color: $dark-two;
   border: 2px solid $grey;
+  border-radius: 3px;
 
   &:hover {
     border: 2px solid $dark-two;
@@ -75,6 +116,12 @@
 
   &:focus {
     border: 2px solid $pink;
+  }
+
+  &::placeholder {
+    @include font(400, 18px, 30px);
+    text-align: left;
+    color: $dark-two;
   }
 }
 
@@ -88,7 +135,7 @@
 
 .form__checkbox-label,
 .form__radio-label {
-  padding-left: 90px;
+  padding-left: 50px;
 
   @include font(400, 18px, 30px);
   color: $dark-two;
@@ -104,9 +151,34 @@
   color: $dark-two;
 }
 
+.form__textarea {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  width: 100%;
+  height: 197px;
+  resize: none;
+
+  &::placeholder {
+    @include font(400, 18px, 30px);
+    text-align: left;
+    color: $dark-two;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 496px;
+    height: 189px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 816px;
+    height: 124px;
+  }
+}
+
 .form__submit {
-  margin-left: 22px;
-  margin-right: 22px;
   padding-top: 12px;
   padding-bottom: 13px;
   width: 276px;
