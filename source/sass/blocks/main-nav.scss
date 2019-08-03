@@ -1,21 +1,21 @@
 .main-nav {
-  margin: 0 auto;
-  width: 320px;
+  // margin: 0 auto;
+  // width: 320px;
 
   /* Временно для сетки */
   min-height: 69px;
 
   @media (min-width: $tablet-width) {
-    width: 660px;
+    // width: 660px;
 
     /* Временно для сетки */
     min-height: 110px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1200px;
+    // width: 960px;
     /* Временно для сетки */
-    // min-height: 110px;
+    min-height: 110px;
   }
 }
 
