@@ -24,6 +24,20 @@ a {
   text-decoration: none;
 }
 
+/* центровщик */
+.wrapper {
+  margin: 0 auto;
+  width: 320px;
+
+  @media (min-width: $tablet-width) {
+    width: 660px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+  }
+}
+
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
 
@@ -47,3 +61,4 @@ a {
     display: inline;
   }
 }
+
