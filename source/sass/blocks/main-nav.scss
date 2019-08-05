@@ -18,7 +18,7 @@
 
 .main-nav__toggle {
   position: absolute;
-  top:0;
+  top: 0;
   right: 0;
   width: 69px;
   height: 69px;
@@ -26,7 +26,7 @@
   outline: none;
 
   /* Временно */
-  background:rgba(255, 0, 0, 0.3);
+  background: rgba(255, 0, 0, 0.3);
 
   @media (min-width: $tablet-width) {
     height: 110px;
