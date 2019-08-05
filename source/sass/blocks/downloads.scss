@@ -1,27 +1,25 @@
 .downloads {
-  margin: 0 auto;
-
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 100%;
 
   padding-top: 490px;
   background-color: $dark-two;
 
   background-image: url("../../img/iphone-hand-mobile@1x.png"), url("../../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: left 176px, center top;
+  background-position: calc(50% - 31px) 176px, center top;
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    width: 660px;
-
+    // width: 660px;
     background-image: url("../../img/iphone-hand-tablet@1x.png"), url("../../img/bg-back-tablet@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: -20px 184px, center top;
+    background-position: calc(50% - 20px) 184px, center top;
   }
 
   @media (min-width: $desktop-width) {
+    margin: 0 auto;
     padding: 0;
     width: 1200px;
 

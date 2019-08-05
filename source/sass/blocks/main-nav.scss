@@ -1,26 +1,40 @@
 .main-nav {
-  // margin: 0 auto;
-  // width: 320px;
-
   /* Временно для сетки */
+  width: 100%;
   min-height: 69px;
 
   @media (min-width: $tablet-width) {
-    // width: 660px;
-
     /* Временно для сетки */
     min-height: 110px;
   }
 
   @media (min-width: $desktop-width) {
-    // width: 960px;
     /* Временно для сетки */
+    width: 760px;
+    flex-grow: 1;
     min-height: 110px;
   }
 }
 
 .main-nav__toggle {
-  display: none;
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 69px;
+  height: 69px;
+  border: none;
+  outline: none;
+
+  /* Временно */
+  background:rgba(255, 0, 0, 0.3);
+
+  @media (min-width: $tablet-width) {
+    height: 110px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav__list {
@@ -38,7 +52,6 @@
 
     @include font(400, 18px, 18px);
     text-transform: none;
-    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -86,5 +99,6 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
+    flex-grow: 1;
   }
 }

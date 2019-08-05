@@ -1,15 +1,4 @@
 .post {
-  margin: 0 auto;
-  width: 320px;
-
-  @media (min-width: $tablet-width) {
-    width: 660px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 1200px;
-  }
-
   &--panorama {
     margin-bottom: 20px;
 
@@ -54,22 +43,22 @@
 .post__container {
   display: flex;
   flex-direction: column;
-  width: 280px;
+  flex-basis: 280px;
   margin-left: 20px;
   margin-right: 20px;
 
   @media (min-width: $tablet-width) {
-    width: 620px;
     margin-left: 20px;
     margin-right: 20px;
 
     flex-direction: row;
+    flex-basis: 620px;
     flex-wrap: wrap;
     align-self: center;
   }
 
   @media (min-width: $desktop-width) {
-    width: 940px;
+    flex-basis: 940px;
     margin-left: 130px;
     margin-right: 130px;
   }
@@ -170,7 +159,6 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-      // padding-bottom: 24px;
     }
 
     @media (min-width: $desktop-width) {
@@ -185,7 +173,6 @@
     @media (min-width: $tablet-width) {
       order: -2;
       flex-grow: 0;
-      // width: 45%;
     }
   }
 }
