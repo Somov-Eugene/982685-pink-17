@@ -1,45 +1,181 @@
-// .post {
+.post {
+  &--panorama {
+    margin-bottom: 20px;
 
-// }
+    @media (min-width: $tablet-width) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &--card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 280px;
+
+    @media (min-width: $tablet-width) {
+      width: 300px;
+      margin-right: 20px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 54px;
+
+      &:nth-child(2n) {
+        margin-right: 20px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.post__container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 280px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    flex-direction: row;
+    flex-basis: 620px;
+    flex-wrap: wrap;
+    align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 940px;
+    margin-left: 130px;
+    margin-right: 130px;
+  }
+}
 
 .post__photo {
+  display: block;
+  overflow: hidden;
   width: 280px;
   height: 180px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 400px;
+  }
 
   &--panorama {
     position: relative;
     width: 320px;
     height: 137px;
+
+    @media (min-width: $tablet-width) {
+      width: auto;
+      max-width: 700px;
+      height: 509px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 1200px;
+      height: 506px;
+    }
+  }
+}
+
+.post__legend {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 140px;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include font(700, 12px, 24px);
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+  background-color: $pink;
+
+  @media (min-width: $tablet-width) {
+    top: 57px;
   }
 
-  &--banner {
-    position: absolute;
-    display: block;
-    top: -118px;
-    right: 20px;
-    width: 140px;
-    padding: 11px 19px;
-
-    @include font(700, 12px, 24px);
-    text-transform: uppercase;
-    color: $white;
-    background-color: $pink;
+  @media (min-width: $desktop-width) {
+    top: 54px;
+    right: 130px;
   }
 }
 
 .post__body {
-  margin-left: 20px;
-  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  padding-top: 13px;
+  padding-bottom: 19px;
   padding-left: 17px;
-  padding-right: 23px;
-  padding-bottom: 28px;
+  padding-right: 17px;
+
   color: $dark-two;
-  background-color: $white-two;
+  // background-color: $white-two;
+  background-color: rgba($color: #0000ff, $alpha: 0.3);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 24px;
+    padding-bottom: 22px;
+    padding-left: 28px;
+    padding-right: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 31px;
+  }
+
+  &--panorama {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 130px;
+      margin-right: 130px;
+    }
+  }
 }
 
-// .post__header {
-
-// }
+.post__header {
+  &--panorama {
+    @media (min-width: $tablet-width) {
+      order: -2;
+      flex-grow: 0;
+    }
+  }
+}
 
 .post__author {
   @include font(700, 14px, 24px);
@@ -47,29 +183,83 @@
 
 .post__age {
   @include font(300, 12px, 24px);
+  text-transform: uppercase;
 }
 
 .post__text {
   @include font(400, 14px, 24px);
+  margin: 0;
+  flex-grow: 1;
 }
 
 .post__like {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+
   color: $pink;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 12px;
+    padding-left: 0;
+  }
+
+  &--panorama {
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+      order: -1;
+      flex-grow: 0;
+    }
+  }
 }
 
 .post__like-button {
-  font-size: 0;
-  vertical-align: middle;
+  padding: 0;
   width: 13px;
   height: 12px;
-  border: none;
+  text-indent: -1000px;
+  vertical-align: middle;
+  overflow: hidden;
+
   color: $pink;
+  background-color: transparent;
   background-image: url("../../img/icon-heart.svg");
   background-repeat: no-repeat;
-  background-position: center 0;
+  background-position: center center;
+  background-size: 13px 12px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    width: 14px;
+    height: 12px;
+    background-size: 14px 12px;
+  }
 }
 
-.post__stats,
+.post__stats {
+  margin-left: 19px;
+
+  @include font(400, 12px, 24px);
+  text-transform: uppercase;
+  color: $pink;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    order: -1;
+    margin-right: auto;
+  }
+
+  &--panorama {
+    @media (min-width: $tablet-width) {
+      margin-right: 17px;
+    }
+  }
+}
+
 .post__stats-counter {
   @include font(400, 12px, 24px);
+  text-transform: uppercase;
+  color: $pink;
 }

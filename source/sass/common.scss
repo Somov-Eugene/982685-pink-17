@@ -11,9 +11,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-
-  // min-width: 320px;
-  width: 320px;
+  min-width: 320px;
 
   @include font;
 
@@ -21,14 +19,23 @@ body {
   background-color: $white;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* центровщик */
+.wrapper {
+  margin: 0 auto;
+  width: 320px;
+
+  @media (min-width: $tablet-width) {
+    width: 660px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -45,4 +52,12 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.text-wrap {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+  }
 }
