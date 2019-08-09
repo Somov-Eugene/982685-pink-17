@@ -1,73 +1,230 @@
 .tariffs {
-  // background-color: $white-two;
-  background-color: rgba(255, 0, 0, 0.5);
+  padding-top: 85px;
+  padding-bottom: 36px;
+  padding-left: 22px;
+  padding-right: 22px;
+  background-color: $white-two;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 140px;
+    padding-bottom: 96px;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+}
+
+.tariffs__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tariffs__table {
-  margin: 0 auto;
-  border-collapse: collapse;
-}
-
-.tariffs__head {
   position: relative;
+  left: -150%;
+  transform: translateX(50%);
+  border-collapse: collapse;
+  width: 300%;
 
-  text-align: center;
-  border: 2px solid $grey;
+  @media (min-width: $tablet-width) {
+    left: auto;
+    transform: none;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 80%;
+  }
+}
+
+.tariffs__header {
+  position: relative;
+  padding: 20px;
+  padding-top: 17px;
+
+  text-transform: uppercase;
   color: $white;
+
   background-color: $dark-two;
-}
+  background-clip: padding-box;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
 
-.tariffs__head--hit {
-  background-image: url("../../img/bg-hit.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
+  @media (min-width: $tablet-width) {
+    padding-top: 10px;
+    padding-bottom: 9px;
+  }
 
-.tariffs__head--hit::after {
-  @include font(400, 10px, 21px);
-  position: absolute;
-  content: "ХИТ";
-  top: 12px;
-  left: 20px;
-  transform: rotate(-45deg);
-  color: $white;
-}
+  @media (min-width: $desktop-width) {
+    padding: 20px;
+    padding-top: 17px;
+  }
 
-.tariffs__name {
-  @include font(700, 16px, 30px);
-}
+  &--hit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 74px;
+    height: 73px;
+    background-image: url("../../img/bg-hit.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 74px 73px;
 
-.tariffs__cost {
-  @include font(300, 18px, 30px);
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+      width: 61px;
+      height: 61px;
+      background-image: url("../../img/bg-hit-tablet.svg");
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: 61px 61px;
+    }
+
+    @media (min-width: $tablet-width) {
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &--hit::after {
+    content: "ХИТ";
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    transform: rotate(-45deg);
+
+    @include font(700, 10px, 21px);
+    color: $white;
+
+    @media (min-width: $tablet-width) {
+      top: 10px;
+      left: 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 16px;
+      left: 16px;
+    }
+  }
 }
 
 .tariffs__cell {
+  position: relative;
+  padding-top: 14px;
+  padding-bottom: 15px;
   padding-left: 22px;
-  padding-right: 22px;
-  width: 276px;
-  min-height: 59px;
+  padding-right: 68px;
+
+  background-color: $white;
   border: 2px solid $grey;
+  background-clip: padding-box;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 7px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 16px;
+    padding-bottom: 13px;
+  }
+
+  &--feature {
+    @media (max-width: $mobile-width-max) {
+      display: none;
+    }
+
+    @media (min-width: $tablet-width) {
+      @include font(400, 14px, 30px);
+    }
+
+    @media (min-width: $desktop-width) {
+      @include font(400, 18px, 30px);
+    }
+  }
 }
 
-.tariffs__feature-name {
-  padding-top: 22px;
-  padding-bottom: 23px;
+.tariffs__name {
+  @include font(700, 18px, 30px);
 
+  @media (min-width: $tablet-width) {
+    @include font(700, 16px, 30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(700, 18px, 30px);
+  }
+}
+
+.tariffs__cost {
+  @include font(300, 24px, 30px);
+
+  @media (min-width: $tablet-width) {
+    @include font(300, 18px, 30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(300, 24px, 30px);
+  }
+}
+
+.tariffs__feature-text {
   @include font(400, 14px, 30px);
+  text-transform: uppercase;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .tariffs__feature-state {
-  @include font(400, 14px, 30px);
-}
+  position: absolute;
+  display: block;
+  width: 31px;
+  height: 30px;
+  top: 13px;
+  right: 17px;
+  text-indent: -1000px;
+  overflow: hidden;
 
-.tariffs__feature-state--on {
-  color: $leaf;
-}
+  @media (min-width: $tablet-width) {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.tariffs__feature-state--off {
-  color: $light-red;
+  &--on {
+    color: $leaf;
+    background-image: url("../../img/icon-yes.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 31px 21px;
+  }
+
+  &--off {
+    color: $light-red;
+    background-image: url("../../img/icon-no.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 27px 26px;
+  }
 }
 
 .tariffs__toggles {
-  text-align: center;
+  margin-top: 36px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
