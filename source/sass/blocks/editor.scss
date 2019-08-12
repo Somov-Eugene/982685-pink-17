@@ -1,42 +1,254 @@
 .editor {
-  margin: 0 auto;
-  width: 320px;
-  // background-color: $white;
+  // background-color: $white-two;
   background-color: rgba(255, 0, 0, 0.5);
 
   @media (min-width: $tablet-width) {
-    width: 660px;
+    // width: 660px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1200px;
+    // width: 1200px;
   }
 }
 
 .editor__slogan {
+  margin: 0;
   padding-left: 32px;
   padding-right: 32px;
+  padding-top: 42px;
+  padding-bottom: 42px;
 
   @include font(400, 14px, 30px);
   text-align: center;
   color: $dark-two;
+  background-color: $white;
 }
 
-// .editor__form {
-// }
+.editor__container {
+  padding-top: 20px;
+  padding-bottom: 41px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 57px;
+    padding-bottom: 54px;
+
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 57px;
+    background-color: $grey;
+  }
+}
 
 .editor__image {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
   width: 280px;
   height: 374px;
+  overflow: hidden;
+
+
+  @media (min-width: $tablet-width) {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    width: 300px;
+    height: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
 }
 
-.editor__items {
+.editor__form {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 410px;
+  }
+}
+
+.editor__toggles {
+  margin-bottom: 34px;
+  padding-left: 20px;
+  padding-right: 20px;
+
   @include list-none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.editor__toggles-item {
+  width: 92px;
+}
+
+.editor__toggle-button {
+  display: block;
+  padding: 0;
+  background-color: transparent;
+  border-style: none;
+
+  &--crop {
+    width: 48px;
+    height: 48px;
+    margin-left: 34px;
+  }
+
+  &--fill {
+    width: 48px;
+    height: 48px;
+    margin-top: 6px;
+    margin-left: 20px;
+  }
+
+  &--contrast {
+    width: 48px;
+    height: 48px;
+    margin-top: 2px;
+    margin-left: 8px;
+  }
+}
+
+.editor__icon {
+  display: block;
+}
+
+
+.editor__controls {
+  margin-bottom: 38px;
+
+  @include list-none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: auto;
+    width: 410px;
+  }
+}
+
+.editor__item {
+  padding-bottom: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  border-bottom: 1px solid #dddfe0;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    padding-top: 29px;
+    padding-bottom: 28px;
+    padding-left: 57px;
+    padding-right: 18px;
+
+    &--crop {
+      padding-top: 13px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    padding-bottom: 28px;
+    padding-right: 30px;
+
+    &--crop {
+      padding-top: 13px;
+    }
+
+    &--color {
+      padding-top: 30px;
+    }
+
+    &--contrast {
+      padding-top: 27px;
+    }
+  }
+}
+
+.editor__label {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+
+    &--crop {
+      top: 8px;
+      left: 2px;
+      width: 22px;
+      height: 22px;
+      background-image: url("../../img/icon-editor-crop.svg");
+      background-size: 22px 22px;
+    }
+
+    &--fill {
+      top: 27px;
+      left: 3px;
+      width: 24px;
+      height: 22px;
+      background-image: url("../../img/icon-editor-fill.svg");
+      background-size: 24px 22px;
+    }
+
+    &--contrast {
+      top: 27px;
+      left: 8px;
+      width: 16px;
+      height: 16px;
+      background-image: url("../../img/icon-editor-contrast.svg");
+      background-size: 16px 16px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: auto;
+
+    &--crop {
+      top: -4px;
+      left: -2px;
+      width: 44px;
+      height: 44px;
+    }
+
+    &--fill {
+      top: 15px;
+      left: 0;
+      width: 48px;
+      height: 43px;
+    }
+
+    &--contrast {
+      top: 18px;
+      left: 6px;
+      width: 32px;
+      height: 32px;
+    }
+  }
 }
 
 .editor__buttons {
   padding-top: 38px;
   padding-bottom: 41px;
-  padding-left: 20px;
-  padding-right: 20px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
