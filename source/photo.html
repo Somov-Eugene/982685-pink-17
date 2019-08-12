@@ -15,22 +15,24 @@
       <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип «Пинк»">
       </a>
-      <nav class="main-nav  main-nav--closed">
+      <nav class="main-nav  main-nav--closed  main-nav--nojs" aria-label="Основное меню">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item  main-nav__item--active">
-            <a>Фотографии</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="form.html">Конкурс</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="https://htmlacademy.ru">HTML Academy</a>
-          </li>
-        </ul>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item  main-nav__item--active">
+              <a>Фотографии</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html">Конкурс</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="https://htmlacademy.ru">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
@@ -204,54 +206,71 @@
     </section>
 
     <section class="editor">
-        <h2 class="editor__slogan">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
+        <h2 class="editor__slogan">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</h2>
+        <div class="editor__container">
+        <div class="editor__image">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg, img/photo-road-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg, img/photo-road-tablet@2x.jpg 2x">
+            <img src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Редактируемое изображение">
+          </picture>
+        </div>
 
-        <form class="editor__form" method="post" action="http://echo.htmlacademy.ru">
-          <div class="editor__image">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg, img/photo-road-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg, img/photo-road-tablet@2x.jpg 2x">
-              <img src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Редактируемое изображение">
-            </picture>
-          </div>
+        <form class="editor__form" action="https://echo.htmlacademy.ru" method="POST" name="image-data">
+          <ul class="editor__toggles">
+            <li class="editor__toggles-item">
+              <button class="editor__toggle-button editor__toggle-button--crop" type="button">
+                <div class="editor__icon  editor__icon--crop  editor__icon--active">
+                  <img src="img/icon-editor-crop.svg" width="44" height="44" alt="Кадрирование">
+                </div>
+                <span class="visually-hidden">Кадрирование</span>
+              </button>
+            </li>
+            <li class="editor__toggles-item">
+              <button class="editor__toggle-button editor__toggle-button--fill" type="button">
+                  <div class="editor__icon  editor__icon--fill">
+                    <img src="img/icon-editor-fill.svg" width="48" height="43" alt="Насыщенность">
+                  </div>
+                <span class="visually-hidden">Насыщенность</span>
+              </button>
+            </li>
+            <li class="editor__toggles-item">
+              <button class="editor__toggle-button editor__toggle-button--contrast" type="button">
+                <div class="editor__icon  editor__icon--contrast">
+                  <img src="img/icon-editor-contrast.svg" width="32" height="32" alt="Контрастность">
+                </div>
+                <span class="visually-hidden">Контрастность</span>
+              </button>
+            </li>
+          </ul>
 
-          <ul class="editor__items">
-            <li class="editor__item">
-              <div class="editor__icon  editor__icon--crop  editor__icon--active">
-                <img src="img/icon-editor-crop.svg" width="44" height="44" alt="Кадрирование">
-              </div>
-              <label class="editor__label  editor__label--crop" for="crop-id">
+          <ul class="editor__controls">
+            <li class="editor__item editor__item--crop">
+              <label class="editor__label editor__label--crop" for="crop">
                 <span class="visually-hidden">Кадрирование</span>
               </label>
-              <input class="editor__range  editor__range--crop" type="range" id="crop-id" name="crop" min="0" max="100" value="100">
+              <input class="editor__scale editor__scale--crop" type="range" name="crop" id="crop" mix="0" max="100" value="50">
             </li>
-
-            <li class="editor__item">
-              <div class="editor__icon  editor__icon--fill">
-                <img src="img/icon-editor-fill.svg" width="48" height="43" alt="Насыщенность">
-              </div>
-              <label class="editor__label  editor__label--fill" for="fill-id">
-                <span class="visually-hidden">Насыщенность</span>
+            <li class="editor__item editor__item--fill range-hidden">
+              <label class="editor__label editor__label--fill" for="fill">
+                <span class="visually-hidden">Баланс цвета</span>
               </label>
-              <input class="editor__range  editor__range--fill" type="range" id="fill-id" name="fill" min="0" max="100" value="50">
+              <input class="editor__scale editor__scale--fill" type="range" name="fill" id="fill" mix="0" max="100" value="50">
             </li>
-
-            <li class="editor__item">
-              <div class="editor__icon  editor__icon--contrast">
-                <img src="img/icon-editor-contrast.svg" width="32" height="32" alt="Контрастность">
-              </div>
-              <label class="editor__label  editor__label--contrast" for="contrast-id">
+            <li class="editor__item editor__item--contrast range-hidden">
+              <label class="editor__label editor__label--contrast" for="contrast">
                 <span class="visually-hidden">Контрастность</span>
               </label>
-              <input class="editor__range  editor__range--contrast" type="range" id="contrast-id" name="contrast" min="0" max="100" value="50">
+              <input class="editor__scale editor__scale--contrast" type="range" name="contrast" id="contrast" mix="0" max="100" value="50">
             </li>
           </ul>
 
           <div class="editor__buttons">
-            <button class="button button--send" type="submit">Запостить</button>
-            <button class="button button--cancel" type="reset">Отмена</button>
-          </div>
+              <button class="button button--send" type="submit">Запостить</button>
+              <button class="button button--cancel" type="reset">Отмена</button>
+            </div>
         </form>
+        </div>
       </section>
     </div>
   </main>
@@ -291,5 +310,7 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/main-nav.js"></script>
 </body>
 </html>

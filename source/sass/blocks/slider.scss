@@ -1,4 +1,65 @@
 // пока не реализован вообще
-.slider {
-  margin: 0;
+.slider__toggles {
+  margin-top: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 30px;
+  }
+}
+
+.slider__toggle {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  outline: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(40, 54, 69, 0.3);
+    border-radius: 50%;
+  }
+
+  &:hover::before {
+    background-color: rgba(40, 54, 69, 0.6);
+  }
+
+  &:active::before {
+    background-color: rgba(40, 54, 69, 0.1);
+  }
+
+  &‐‐active {
+    position: relative;
+    cursor: default;
+  }
+
+  &‐‐active::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    left: 50%;
+    border: 3px solid $dark-two;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  &‐‐active:hover::before {
+    background-color: transparent;
+  }
 }
