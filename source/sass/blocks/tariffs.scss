@@ -3,10 +3,11 @@
 }
 
 .tariffs__bg-triangle {
-  position: relative;
-  overflow: hidden;
   padding-top: 90px;
   padding-bottom: 36px;
+
+  position: relative;
+  overflow: hidden;
   max-width: 100%;
 
   @include bg-triangle(26px);
@@ -15,7 +16,7 @@
     padding-top: 88px;
     padding-bottom: 68px;
 
-    @include bg-triangle(51px);
+    @include bg-triangle(52px);
   }
 
   @media (min-width: $desktop-width) {
