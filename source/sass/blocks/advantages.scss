@@ -61,12 +61,12 @@
   padding-right: 0;
   // background-color: $grey-light;
 
-  @include bg-triangle(26px);
+  @include bg-triangle(25px);
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
 
-    @include bg-triangle(51px);
+    @include bg-triangle(52px);
   }
 
   @media (min-width: $desktop-width) {
