@@ -1,42 +1,54 @@
 .copyright {
-  display: flex;
-  justify-content: center;
-}
-
-.copyright__text {
-  display: block;
-  margin-right: 15px;
-  padding-top: 5px;
-
-  @include font(400, 14px, 18px);
-  color: $dark-two;
+  margin-top: 34px;
+  font-size: 0;
 
   @media (min-width: $tablet-width) {
-    padding-top: 6px;
+    margin-top: 14px;
+    margin-bottom: 9px;
+    text-align: right;
+
+    width: 150px;
+    flex-shrink: 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 13px;
+    margin-top: 15px;
+    width: 170px;
+  }
+}
 
+.copyright__text {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 6px;
+
+  @include font(400, 14px, 18px);
+
+  @media (min-width: $desktop-width) {
+    padding-top: 3px;
     @include font(400, 18px, 18px);
   }
 }
 
 .copyright__link {
-  position: relative;
-  display: block;
+  margin-left: 14px;
+
+  display: inline-block;
+  vertical-align: middle;
+
   width: 27px;
   height: 34px;
-  color: $pink;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    background-image: url("../../img/htmlacademy.svg");
-    background-repeat: no-repeat;
-    top: 0;
-    left: 0;
-    width: 27px;
-    height: 34px;
+.copyright__academy-svg {
+  fill: $pink;
+
+  &:hover,
+  &:focus {
+    fill: $dark-two;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
