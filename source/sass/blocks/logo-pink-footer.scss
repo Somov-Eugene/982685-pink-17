@@ -1,0 +1,69 @@
+.logo-pink-footer {
+  display: inline-block;
+  vertical-align: top;
+  height: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 17px;
+    flex-shrink: 0;
+    width: 150px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 19px;
+    width: 170px;
+  }
+}
+
+.logo-pink-footer__svg {
+  width: 147px;
+  height: 40px;
+  color: $pink;
+  fill: $dark-two;
+}
+
+.logo-pink-footer[href]:hover .logo-pink-footer__svg,
+.logo-pink-footer[href]:focus .logo-pink-footer__svg {
+  fill: $pink;
+}
+
+.logo-pink-footer[href]:active .logo-pink-footer__svg {
+  color: $pink;
+  fill: $dark-two;
+  opacity: 0.3;
+}
+
+.logo-pink-footer__glasses {
+  fill: currentColor;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.logo-pink-footer__glasses-crop {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    fill: currentColor;
+  }
+}
+
+.logo-pink-footer__one-star {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    fill: currentColor;
+  }
+}
+
+.logo-pink-footer__three-stars {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    fill: inherit;
+  }
+}
