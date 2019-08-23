@@ -1,24 +1,23 @@
-// пока не реализован вообще
 .slider__toggles {
-  margin-top: 28px;
-
-  @media (min-width: $tablet-width) {
-    margin-top: 30px;
-  }
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 280px;
+  font-size: 0;
+  text-align: center;
+  background-color: inherit;
 }
 
 .slider__toggle {
+  margin: 0;
   position: relative;
   display: inline-block;
   vertical-align: top;
-  font-size: 0;
-  width: 20px;
-  height: 20px;
-
-  cursor: pointer;
+  width: 24px;
+  height: 24px;
   background-color: inherit;
   border: none;
   outline: none;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -29,33 +28,34 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(40, 54, 69, 0.3);
+    background-color: rgba($dark-two, 0.3);
     border-radius: 50%;
   }
 
-  &:hover::before {
-    background-color: rgba(40, 54, 69, 0.6);
+  &:hover::before,
+  &:focus::before {
+    background-color: rgba($dark-two, 0.6);
   }
 
   &:active::before {
-    background-color: rgba(40, 54, 69, 0.1);
+    background-color: rgba($dark-two, 0.1);
   }
 
   &‐‐active {
-    position: relative;
     cursor: default;
   }
 
   &‐‐active::before {
     content: "";
     position: absolute;
+    display: block;
     width: 12px;
     height: 12px;
     top: 50%;
     left: 50%;
-    border: 3px solid $dark-two;
-    background-color: transparent;
     transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: 3px solid $dark-two;
     border-radius: 50%;
   }
 
