@@ -1,104 +1,102 @@
 .button {
-  display: block;
-
   padding-top: 15px;
   padding-bottom: 16px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  display: inline-block;
+  vertical-align: top;
 
   @include font(700, 18px, 18px);
-  background-color: transparent;
-  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
 
-  &--download {
-    margin: 0 auto;
-    width: 290px;
-    padding-left: 40px;
-    padding-right: 40px;
-    color: $white;
-    border: 3px solid $white;
+  border: none;
+  outline: none;
+  cursor: pointer;
 
-    @media (min-width: $tablet-width) {
-      margin: 0;
-      margin-top: -2px;
-      margin-left: 20px;
-
-      width: 300px;
-      padding-left: 45px;
-      padding-right: 45px;
-    }
-
-    @media (min-width: $desktop-width) {
-      @include font(700, 21px, 18px);
-
-      margin: 0;
-      margin-top: 12px;
-      margin-left: 130px;
-
-      width: 300px;
-      padding-left: 28px;
-      padding-right: 28px;
-    }
-  }
-
-  &--download:hover,
-  &--download:focus {
+  &--upload {
     color: $pink;
-    background-color: $white;
-  }
+    background-color: transparent;
 
-  &--download:active {
-    color: rgba(210, 40, 86, 0.3);
-    background-color: $white;
-  }
-
-  &--send {
-    width: 280px;
-    padding-left: 90px;
-    padding-right: 90px;
-    margin-bottom: 12px;
-    color: $pink;
     border: 3px solid $pink;
-  }
+    border-radius: 30px;
 
-  &--send:hover,
-  &--send:focus {
-    color: $white;
-    background-color: $pink;
-  }
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $pink;
+    }
 
-  &--send:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: $pink;
+    &:active {
+      color: rgba($white, 0.3);
+    }
   }
 
   &--cancel {
-    width: 280px;
-    padding-left: 104px;
-    padding-right: 105px;
-    color: rgba(40, 54, 69, 0.1);
-    border: 3px solid rgba(40, 54, 69, 0.1);
+    color: $dark-two;
+    background-color: transparent;
+
+    border: 3px solid $dark-two;
+    border-radius: 30px;
+    opacity: 0.1;
+
+    &:hover,
+    &:focus {
+      opacity: 0.3;
+    }
+
+    &:active {
+      color: $white;
+      background-color: $dark-two;
+      opacity: 0.3;
+    }
   }
 
-  &--cancel:hover,
-  &--cancel:focus {
-    color: rgba(40, 54, 69, 0.3);
-    border: 3px solid rgba(40, 54, 69, 0.3);
-  }
+  &--download {
+    color: $white;
+    background-color: transparent;
 
-  &--cancel:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: rgba(40, 54, 69, 0.3);
-    border: 3px solid transparent;
+    border: 3px solid $white;
+    border-radius: 30px;
+
+    @media (min-width: $desktop-width) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      @include font(700, 21px, 18px);
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $pink;
+    }
+
+    &:active {
+      color: rgba($pink, 0.3);
+    }
   }
 
   &--submit,
   &--modal {
-    padding: 17px 30px 16px;
-    border-radius: 3px;
-    font-size: 18px;
-    line-height: 30px;
+    padding-top: 17px;
+    padding-bottom: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @include font(700, 18px, 30px);
     text-transform: uppercase;
     color: $white;
     background-color: $green;
+    border-radius: 3px;
+
+    @media (min-width: $tablet-width) {
+      padding-right: 57px;
+      padding-left: 57px;
+    }
 
     &:hover,
     &:focus {
