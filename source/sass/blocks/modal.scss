@@ -2,11 +2,13 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 320px;
+
+  transform: translate(-50%, -50%);
   text-align: center;
   background-color: $white;
-  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  box-shadow: 0 7px 15px rgba($black, 0.15);
+
   z-index: 10;
 
   @media (min-width: $tablet-width) {
@@ -14,7 +16,8 @@
     border-radius: 5px;
   }
 
-  &--success {
+  &--success,
+  &--error {
     @media (min-width: $desktop-width) {
       width: 780px;
     }
@@ -22,11 +25,24 @@
 }
 
 .modal__body {
-  padding: 40px 20px 0;
+  padding-top: 40px;
+  padding-bottom: 0;
+  padding-left: 20px;
+  padding-right: 20px;
 
   &--error {
     @media (min-width: $tablet-width) {
-      padding: 36px 80px 0;
+      padding-top: 36px;
+      padding-bottom: 0;
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 48px;
+      padding-bottom: 65px;
+      padding-left: 160px;
+      padding-right: 160px;
     }
   }
 
@@ -34,37 +50,46 @@
     padding-bottom: 30px;
 
     @media (min-width: $tablet-width) {
-      padding: 36px 70px 34px;
+      padding-top: 36px;
+      padding-bottom: 34px;
+      padding-left: 70px;
+      padding-right: 70px;
     }
 
     @media (min-width: $desktop-width) {
-      padding: 40px 160px 39px;
+      padding-top: 40px;
+      padding-bottom: 39px;
+      padding-left: 160px;
+      padding-right: 160px;
     }
   }
 }
 
 .modal__title {
   margin-bottom: 26px;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
+
+  @include font(700, 18px, 24px);
 
   @media (min-width: $tablet-width) {
     margin-bottom: 22px;
-    font-size: 30px;
-    line-height: 40px;
+
+    @include font(700, 30px, 40px);
   }
 }
 
 .modal__text {
+  @include font(400, 14px, 24px);
+
   @media (min-width: $tablet-width) {
-    font-size: 18px;
-    line-height: 24px;
+    @include font(400, 18px, 24px);
   }
 }
 
 .modal__footer {
-  padding: 38px 20px 50px;
+  padding-top: 38px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @media (min-width: $tablet-width) {
     padding-left: 80px;
@@ -73,15 +98,27 @@
   }
 
   &--error {
+    padding-top: 36px;
+    padding-bottom: 52px;
+
     @media (min-width: $tablet-width) {
-      padding-bottom: 52px;
+      padding-top: 36px;
+      padding-bottom: 54px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 42px;
+      padding-bottom: 54px;
+      padding-left: 240px;
+      padding-right: 240px;
+      background-color: $grey-light;
     }
   }
 
   &--success {
     padding-top: 48px;
     padding-bottom: 52px;
-    background-color: $white-two;
+    background-color: $grey-light;
 
     @media (min-width: $desktop-width) {
       padding-left: 160px;

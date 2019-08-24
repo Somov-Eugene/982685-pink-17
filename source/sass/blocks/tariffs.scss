@@ -1,77 +1,92 @@
 .tariffs {
-  padding-top: 85px;
+  background-color: $grey-light;
+}
+
+.tariffs__bg-triangle {
+  padding-top: 90px;
   padding-bottom: 36px;
-  padding-left: 22px;
-  padding-right: 22px;
-  background-color: $white-two;
+
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+
+  @include bg-triangle(26px);
 
   @media (min-width: $tablet-width) {
-    padding-top: 80px;
-    padding-bottom: 70px;
+    padding-top: 88px;
+    padding-bottom: 68px;
+
+    @include bg-triangle(52px);
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 140px;
     padding-bottom: 96px;
-    padding-left: 130px;
-    padding-right: 130px;
-  }
-}
 
-.tariffs__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    @include bg-triangle(65px);
+  }
 }
 
 .tariffs__table {
   position: relative;
-  left: -150%;
-  transform: translateX(50%);
   border-collapse: collapse;
-  width: 300%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 262.5%;
 
   @media (min-width: $tablet-width) {
-    left: auto;
-    transform: none;
     width: 100%;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 80%;
   }
 }
 
+.tariffs__features-header {
+  @media (max-width: $mobile-width-max) {
+    display: none;
+  }
+}
+
+.tariffs__header + .tariffs__header {
+  border-left: 2px solid $grey;
+  border-right: 2px solid $grey;
+}
+
 .tariffs__header {
-  position: relative;
-  padding: 20px;
   padding-top: 17px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 
+  position: relative;
   text-transform: uppercase;
-  color: $white;
 
+  min-width: 276px;
+  color: $white;
   background-color: $dark-two;
   background-clip: padding-box;
-  border-left: 2px solid transparent;
-  border-right: 2px solid transparent;
 
   @media (min-width: $tablet-width) {
-    padding-top: 10px;
-    padding-bottom: 9px;
+    padding-top: 11px;
+    padding-bottom: 12px;
+    min-width: 154px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 20px;
     padding-top: 17px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width: 234px;
   }
 
   &--hit::before {
     content: "";
     position: absolute;
     top: 0;
-    left: -2px;
+    left: 0;
     width: 74px;
     height: 73px;
+
+    background-color: transparent;
     background-image: url("../../img/bg-hit.svg");
     background-repeat: no-repeat;
     background-position: top left;
@@ -80,109 +95,114 @@
     @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
       width: 61px;
       height: 61px;
+
       background-image: url("../../img/bg-hit-tablet.svg");
       background-repeat: no-repeat;
       background-position: top left;
       background-size: 61px 61px;
-    }
-
-    @media (min-width: $tablet-width) {
-      top: 0;
-      left: 0;
     }
   }
 
   &--hit::after {
     content: "ХИТ";
     position: absolute;
-    top: 12px;
-    left: 20px;
+    top: 14px;
+    left: 12px;
     transform: rotate(-45deg);
 
-    @include font(700, 10px, 21px);
+    @include font(400, 14px, 24px);
     color: $white;
 
     @media (min-width: $tablet-width) {
-      top: 10px;
-      left: 10px;
+      top: 6px;
+      left: 6px;
+
+      @include font(700, 14px, 24px);
     }
 
     @media (min-width: $desktop-width) {
-      top: 16px;
-      left: 16px;
+      top: 12px;
+      left: 12px;
+
+      @include font(400, 16px, 30px);
     }
   }
 }
 
 .tariffs__cell {
   position: relative;
-  padding-top: 14px;
-  padding-bottom: 15px;
+  padding-top: 13px;
+  padding-bottom: 14px;
   padding-left: 22px;
   padding-right: 68px;
+  min-width: 276px;
 
   background-color: $white;
-  border: 2px solid $grey;
   background-clip: padding-box;
 
+  border: 2px solid $grey;
+  border-top: none;
+
   @media (min-width: $tablet-width) {
-    padding-top: 7px;
-    padding-bottom: 8px;
+    padding-top: 6px;
+    padding-bottom: 9px;
     padding-left: 16px;
     padding-right: 16px;
+    min-width: 154px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 16px;
     padding-bottom: 13px;
+    padding-left: 22px;
+    padding-right: 22px;
+    min-width: 234px;
   }
 
-  &--feature {
+  &--feature-title {
+    border-top: 2px solid $grey;
+
     @media (max-width: $mobile-width-max) {
       display: none;
     }
+  }
+}
+
+.tariffs__feature {
+  @media (min-width: $tablet-width) {
+    @include font(400, 14px, 24px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(400, 18px, 30px);
+  }
+
+  &--name {
+    @include font(400, 14px, 24px);
+    text-transform: uppercase;
+    color: $dark-two;
 
     @media (min-width: $tablet-width) {
-      @include font(400, 14px, 30px);
-    }
-
-    @media (min-width: $desktop-width) {
-      @include font(400, 18px, 30px);
+      display: none;
     }
   }
 }
 
 .tariffs__name {
+  margin: 0;
+
   @include font(700, 18px, 30px);
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
     @include font(700, 16px, 30px);
-  }
-
-  @media (min-width: $desktop-width) {
-    @include font(700, 18px, 30px);
   }
 }
 
 .tariffs__cost {
   @include font(300, 24px, 30px);
 
-  @media (min-width: $tablet-width) {
-    @include font(300, 18px, 30px);
-  }
-
-  @media (min-width: $desktop-width) {
-    @include font(300, 24px, 30px);
-  }
-}
-
-.tariffs__feature-text {
-  @include font(400, 14px, 30px);
-  text-transform: uppercase;
-  text-align: left;
-
-  @media (min-width: $tablet-width) {
-    display: none;
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+    @include font(300, 18px, 24px);
   }
 }
 
@@ -205,24 +225,24 @@
   }
 
   &--on {
-    color: $leaf;
+    background-color: transparent;
     background-image: url("../../img/icon-yes.svg");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-size: 31px 21px;
   }
 
   &--off {
-    color: $light-red;
+    background-color: transparent;
     background-image: url("../../img/icon-no.svg");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-size: 27px 26px;
   }
 }
 
 .tariffs__toggles {
-  margin-top: 36px;
+  margin-top: 33px;
 
   @media (min-width: $tablet-width) {
     display: none;

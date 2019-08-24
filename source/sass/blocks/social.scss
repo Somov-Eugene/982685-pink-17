@@ -1,64 +1,77 @@
-.social__list {
-  @include list-none;
+.social {
+  margin-top: 35px;
+  font-size: 0;
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
 
-.social__item {
-  &:not(:last-child) {
-    margin-right: 12px;
+  @media (min-width: $desktop-width) {
+    margin-left: 8px;
+
+    &--index {
+      margin-left: 0;
+    }
   }
 }
 
 .social__link {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 6px;
+  margin-right: 6px;
+
   position: relative;
-  display: block;
+  display: inline-block;
+  vertical-align: top;
   width: 51px;
   height: 51px;
-  border: 3px solid rgba(40, 54, 69, 0.1);
+
+  border: 3px solid rgba($dark-two, 0.1);
   border-radius: 50%;
 
-  &:hover {
+  @media (min-width: $tablet-width) {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  &:hover:not(:active),
+  &:focus {
     border-color: $dark-two;
   }
+}
 
-  &:active {
-    border: 3px solid rgba(40, 54, 69, 0.1);
-  }
+.social__link:active .social__icon {
+  opacity: 0.3;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    background-repeat: no-repeat;
-  }
+.social__icon {
+  position: absolute;
+  fill: $pink;
 
-  &:active::before {
-    opacity: 0.3;
-  }
-
-  &--twitter::before {
+  &--twitter {
     top: 15px;
     left: 14px;
     width: 18px;
     height: 15px;
-    background-image: url("../../img/icon-twitter.svg");
   }
 
-  &--facebook::before {
+  &--facebook {
     top: 12px;
     left: 18px;
     width: 9px;
     height: 19px;
-    background-image: url("../../img/icon-facebook.svg");
   }
 
-  &--youtube::before {
+  &--youtube {
     top: 15px;
     left: 17px;
     width: 15px;
     height: 14px;
-    background-image: url("../../img/icon-youtube.svg");
   }
 }

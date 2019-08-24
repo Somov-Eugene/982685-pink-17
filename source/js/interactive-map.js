@@ -19,7 +19,7 @@ if (mapElement) {
       center: new google.maps.LatLng(59.936287, 30.321047)
     };
 
-    mapElement.classList.add("contacts__map--loaded");
+    mapElement.classList.add("contacts-map--loaded");
 
     map = new google.maps.Map(mapElement, mapOptions);
     var image = {
