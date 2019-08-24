@@ -10,6 +10,5 @@ node_modules/
 npm-debug.*
 source/css/*.css
 source/css/*.map
+source/img/*.webp
 Thumbs.db
-source/bg/*
-source/sass/outline.scss
