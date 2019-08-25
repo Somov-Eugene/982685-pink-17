@@ -24,7 +24,7 @@ if (mapElement) {
     map = new google.maps.Map(mapElement, mapOptions);
 
     var mapMarker = {
-      url: "../img/icon-map-marker.svg",
+      url: "img/icon-map-marker.svg",
       size: new google.maps.Size(36, 36),
       scaledSize: new google.maps.Size(36, 36),
       origin: new google.maps.Point(0, 0),
@@ -42,5 +42,5 @@ if (mapElement) {
   };
 
   google.maps.event.addDomListener(window, "load", init);
-  google.maps.event.addDomListener(window, "resize", m_res );
+  google.maps.event.addDomListener(window, "resize", map_resize);
 }
