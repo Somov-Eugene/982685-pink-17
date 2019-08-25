@@ -3,7 +3,7 @@ var mapElement = document.getElementById("map");
 if (mapElement) {
   var map = "";
 
-  var m_res = function () {
+  var map_resize = function () {
     google.maps.event.trigger(map, "resize");
     map.panTo(new google.maps.LatLng(59.936287, 30.321047));
   };
@@ -22,8 +22,9 @@ if (mapElement) {
     mapElement.classList.add("contacts-map--loaded");
 
     map = new google.maps.Map(mapElement, mapOptions);
-    var image = {
-      url: "../img/icon-map-marker.svg",
+
+    var mapMarker = {
+      url: "img/icon-map-marker.svg",
       size: new google.maps.Size(36, 36),
       scaledSize: new google.maps.Size(36, 36),
       origin: new google.maps.Point(0, 0),
@@ -34,12 +35,12 @@ if (mapElement) {
       position: new google.maps.LatLng(59.936287, 30.321047),
       map: map,
       optimized: false,
-      icon: image
+      icon: mapMarker
     });
 
-    m_res();
+    map_resize();
   };
 
   google.maps.event.addDomListener(window, "load", init);
-  google.maps.event.addDomListener(window, "resize", m_res );
+  google.maps.event.addDomListener(window, "resize", map_resize);
 }

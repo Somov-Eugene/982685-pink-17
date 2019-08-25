@@ -22,7 +22,7 @@
       height: 64px;
       transform: translateX(-50%);
       background-color: transparent;
-      background-image: url("../../img/icon-quotes.svg");
+      background-image: url("../img/icon-quotes.svg");
       background-repeat: no-repeat;
       background-position: top left;
       background-size: 79px 64px;
@@ -138,14 +138,14 @@
 
   &--prev {
     left: 0;
-    background-image: url("../../img/icon-review-arrow-left.svg");
+    background-image: url("../img/icon-review-arrow-left.svg");
     background-repeat: no-repeat;
     background-position: top left;
   }
 
   &--next {
     right: 0;
-    background-image: url("../../img/icon-review-arrow-right.svg");
+    background-image: url("../img/icon-review-arrow-right.svg");
     background-repeat: no-repeat;
     background-position: top left;
   }
