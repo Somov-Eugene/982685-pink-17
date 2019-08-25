@@ -87,7 +87,7 @@
     height: 73px;
 
     background-color: transparent;
-    background-image: url("../../img/bg-hit.svg");
+    background-image: url("../img/bg-hit.svg");
     background-repeat: no-repeat;
     background-position: top left;
     background-size: 74px 73px;
@@ -96,7 +96,7 @@
       width: 61px;
       height: 61px;
 
-      background-image: url("../../img/bg-hit-tablet.svg");
+      background-image: url("../img/bg-hit-tablet.svg");
       background-repeat: no-repeat;
       background-position: top left;
       background-size: 61px 61px;
@@ -226,7 +226,7 @@
 
   &--on {
     background-color: transparent;
-    background-image: url("../../img/icon-yes.svg");
+    background-image: url("../img/icon-yes.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 31px 21px;
@@ -234,7 +234,7 @@
 
   &--off {
     background-color: transparent;
-    background-image: url("../../img/icon-no.svg");
+    background-image: url("../img/icon-no.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 27px 26px;
