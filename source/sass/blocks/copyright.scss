@@ -26,6 +26,7 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 3px;
+
     @include font(400, 18px, 18px);
   }
 }

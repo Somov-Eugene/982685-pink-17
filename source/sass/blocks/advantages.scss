@@ -72,6 +72,7 @@
   @media (min-width: $desktop-width) {
     padding-top: 75px;
     width: 100%;
+
     @include bg-triangle(74px, 87px);
   }
 }
