@@ -117,8 +117,14 @@
 
   &[href]:hover,
   &[href]:focus {
-    color: $black;
+    color: $dark-two;
     text-decoration: underline;
+  }
+
+  &[href]:active {
+    color: $dark-two;
+    text-decoration: none;
+    opacity: 0.3;
   }
 }
 
