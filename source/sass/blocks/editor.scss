@@ -96,7 +96,6 @@
 
 .editor__tools {
   @include list-none;
-  font-size: 0;
 
   @media (max-width: $mobile-width-max) {
     position: relative;
@@ -172,7 +171,8 @@
 
   fill: rgba($dark-two, 0.3);
 
-  &:hover {
+  &:hover,
+  &:focus {
     cursor: pointer;
     fill: rgba($dark-two, 0.5);
   }
@@ -183,6 +183,12 @@
 
   @media (min-width: $tablet-width) {
     fill: $pink;
+
+    &:hover,
+    &:focus {
+      fill: $pink;
+      cursor: default;
+    }
   }
 
   &--crop {
@@ -299,10 +305,8 @@
   display: inline-block;
   top: 0;
   bottom: 0;
-  left: 83%;
   width: 14px;
   height: 14px;
-  transform: translateX(-50%);
 
   background-color: $white;
   border: 2px solid $pink;
@@ -310,6 +314,42 @@
 
   cursor: pointer;
   outline: none;
+
+  &--crop {
+    left: 79%;
+
+    @media (min-width: $tablet-width) {
+      left: 72%;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 25%;
+    }
+  }
+
+  &--fill {
+    left: 79%;
+
+    @media (min-width: $tablet-width) {
+      left: 12%;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 86%;
+    }
+  }
+
+  &--contrast {
+    left: 79%;
+
+    @media (min-width: $tablet-width) {
+      left: 48%;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 56%;
+    }
+  }
 
   &:active,
   &:focus {

@@ -2,6 +2,8 @@
   margin: 0;
   padding-top: 10px;
   padding-bottom: 15px;
+  padding-left: 0;
+  padding-right: 0;
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
@@ -56,6 +58,8 @@
   &--fullname {
     @media (max-width: $mobile-width-max) {
       padding-top: 24px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     @media (min-width: $tablet-width) {
@@ -73,6 +77,11 @@
   &--apps {
     background-color: $grey-light;
 
+    @media (max-width: $mobile-width-max) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
     @media (min-width: $tablet-width) {
       background-color: transparent;
       order: -2;
@@ -85,6 +94,11 @@
 
   &--contacts {
     padding-top: 30px;
+
+    @media (max-width: $mobile-width-max) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
 
     @media (min-width: $tablet-width) {
       order: -1;
@@ -99,6 +113,11 @@
   &--achievements {
     background-color: $grey-light;
 
+    @media (max-width: $mobile-width-max) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
     @media (min-width: $tablet-width) {
       background-color: transparent;
     }
@@ -110,6 +129,11 @@
 
   &--emotions {
     padding-bottom: 0;
+
+    @media (max-width: $mobile-width-max) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
 
     @media (min-width: $desktop-width) {
       width: 100%;
@@ -331,7 +355,7 @@
 
   display: block;
   box-sizing: border-box;
-  width: 100%;
+  width: calc(100% - 40px);
 
   @include font(400, 18px, 30px);
   color: $dark-two;
@@ -591,7 +615,7 @@
   padding-left: 20px;
   padding-right: 20px;
   display: block;
-  width: 100%;
+  width: calc(100% - 40px);
 
   @include font(400, 18px, 30px);
   color: $dark-two;
@@ -604,6 +628,7 @@
     height: 201px;
 
     @media (min-width: $tablet-width) {
+      width: 100%;
       height: 193px;
     }
 
@@ -633,6 +658,8 @@
   padding-top: 48px;
 
   @media (max-width: $mobile-width-max) {
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
   }
 

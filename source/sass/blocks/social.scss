@@ -41,12 +41,13 @@
   }
 
   &:hover:not(:active),
-  &:focus {
+  &:focus:not(:active) {
     border-color: $dark-two;
   }
 }
 
 .social__link:active .social__icon {
+  border-color: rgba($dark-two, 0.1);
   opacity: 0.3;
 }
 

@@ -1,4 +1,4 @@
-.slider__toggles {
+.pagination {
   margin-left: auto;
   margin-right: auto;
   max-width: 280px;
@@ -7,7 +7,7 @@
   background-color: inherit;
 }
 
-.slider__toggle {
+.pagination__item {
   margin: 0;
   position: relative;
   display: inline-block;
